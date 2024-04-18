@@ -1,0 +1,23 @@
+---
+import { Image } from "astro:assets";
+import Hand from '../assets/hand.webp'
+import Background from '../assets/background.png'
+---
+<header>
+
+    <picture class="absolute top-[25%] right-[15%] "> 
+    <Image class="w-[300px] " src={Hand}  alt="Hand Estetic"></Image>
+    </picture> 
+   <div class="w-[80ch] pt-20">
+    <h1 class=" pl-5 drop-shadow-lg">Welcome to my Estetic Store</h1>
+    <p class="px-14 pt-10 text-gray-500 ">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius laboriosam atque placeat cum modi consectetur accusantium veniam. Eum voluptas veniam odio earum. Delectus nihil laboriosam ab aperiam velit, hic veniam? Totam, nam quae, ex voluptatem blanditiis minima incidunt officia veniam, maiores molestias est voluptatibus? Aut qui dolores dolor et quod!</p>
+   </div>
+   
+</header>
+
+<style>
+    header {
+        height: calc(100vh - 64px);
+        background-color: var(--color-secondary);
+    }
+</style>
