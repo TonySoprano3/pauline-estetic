@@ -23,15 +23,34 @@ import Layout from '../layouts/Layout.astro';
 	--color-primary: #F3D0D7;
 	--color-secondary: #F0EBE3;
 	--color-tertiary: #F6F5F2;
-  }
+  		  }
+
 html {
 	background-color: var(--color-background);
 	font-family: "Playfair Display", serif;
 	line-height: 1.576rem;
-}
+	}
+
 h1 {
 	font-weight: bold;
 	font-size: 3.5rem;
 	color: var(--color-primary);
-}
+	}
+	
+p  {	
+
+	font-size: clamp(1.035rem, 2vw, 0.85rem);
+	}
+
+	@media (max-width: 1080px) {
+		h1 {
+			font-size: 2.35rem;
+			line-height: 3rem;
+			
+		}
+		h2 {
+			font-size: 2.20rem;
+		}
+	
+	}
 </style>
