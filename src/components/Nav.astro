@@ -1,7 +1,13 @@
 
 <nav
+
 class="
   flex flex-wrap
+  z-30
+  shadow
+  md:shadow-none
+  fixed
+  md:static
   items-center
   justify-between
   w-full
@@ -9,12 +15,11 @@ class="
   md:py-0
   px-4
   text-lg text-gray-700
-  bg-white
-  drop-shadow-lg
+  
 "
 >
 <div>
-  <a href="#">
+  <a class="logo"  href="#">
   <p>Logo</p>
   </a>
 </div>
@@ -64,25 +69,37 @@ class="
         >Blog</a
       >
     </li>
-    <li>
-      <a
-        class="md:p-4 py-2 block  text-purple-500"
-        href="#"
-        >Sign Up</a
-      >
-    </li>
+  
   </ul>
 </div>
 </nav>
 
 <style>
-    nav {
-        background-color: var(--color-primary);
-    }
-    a {
-        color: var(--color-secondary);
-        font-weight: 600;
-    }
+
+a {
+    
+    color: var(--color-secondary);
+    font-weight: 600;
+}
+
+
+@media (max-width: 768px) {
+  nav {
+    background-color: var(--color-secondary);
+    
+  }
+  a {
+    color: var(--color-primary);
+    font-weight: 600;
+  
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+}
+.logo {
+  color: var(--color-primary);
+}
 </style>
 
 <script>

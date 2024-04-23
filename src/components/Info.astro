@@ -1,0 +1,34 @@
+---
+import { Image } from 'astro:assets'
+import Hand from '../assets/hand.webp'
+---
+
+<section class=" rounded-3xl flex flex-wrap content-center justify-evenly text-center h-full drop-shadow-lg gap-3 p-3 mx-8">
+<article>
+<Image src={Hand} alt="Hand"></Image>
+<p>Semi-permanent</p>
+</article>
+
+<article>
+    <Image src={Hand} alt="Hand"></Image>
+
+    <p>Kapping</p>
+
+</article>
+
+<article>
+    <Image src={Hand} alt="Hand"></Image>
+
+    <p>Soft Gel Extensions</p>
+
+</article>
+</section>
+
+<style>
+    section {
+        background-color: var(--color-tertiary);
+    }
+    section img {
+        width: 150px;
+    }
+</style>

@@ -1,16 +1,24 @@
 ---
 import Header from '../components/Header.astro';
+import Info from '../components/Info.astro';
 import Nav from '../components/Nav.astro';
+import SemiPermanent from '../components/Semi-permanent.astro';
 import Layout from '../layouts/Layout.astro';
+
 ---
 
 <Layout title="Pauline Estetic">
-	<main>
+
+	<main >
+		<div class="bg absolute md:w-[42%] right-0 top-0 h-[112dvh]"></div>
+		<div class="bg-2 absolute w-full md:w-[58%] left-0 top-0 h-[112dvh]"></div>
 		<Nav/>
 		<Header/>
-		
-		
+		<Info/>
+		<SemiPermanent/>
 	</main>
+		
+	
 </Layout>
 
 <style is:global>
@@ -25,6 +33,14 @@ import Layout from '../layouts/Layout.astro';
 	--color-tertiary: #F6F5F2;
   		  }
 
+		  .bg {
+			z-index: -10;
+			background-color: var(--color-primary);
+		  }
+		  .bg-2 {
+			z-index: -10;
+			background-color: var(--color-secondary);
+		  }
 html {
 	background-color: var(--color-background);
 	font-family: "Playfair Display", serif;
@@ -32,8 +48,8 @@ html {
 	}
 
 h1 {
-	font-weight: bold;
-	font-size: 3.5rem;
+	line-height: 3rem;
+	font-size: 3rem;
 	color: var(--color-primary);
 	}
 	
@@ -42,6 +58,7 @@ p  {
 	font-size: clamp(1.035rem, 2vw, 0.85rem);
 	}
 
+	
 	@media (max-width: 1080px) {
 		h1 {
 			font-size: 2.35rem;
@@ -53,4 +70,5 @@ p  {
 		}
 	
 	}
+	
 </style>

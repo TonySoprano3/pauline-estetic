@@ -1,28 +1,58 @@
 ---
 import { Image } from "astro:assets";
 import Hand from '../assets/hand.webp'
-import Background from '../assets/background.png'
+
+
 ---
-<header class="grid grid-cols-1 md:grid-cols-2 grid-flow-row-dense">
-    <div class="w-auto md:w-[80ch] p-3 md:p-0  flex flex-col flex-wrap text-wrap gap-5 md:gap-10">
-       <h1 class="md:pl-5 pt-20 drop-shadow-lg">Welcome to my Estetic Store</h1>
-       <p class="md:px-14 text-gray-500 text-center md:text-left">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius laboriosam atque placeat cum modi consectetur accusantium veniam. Eum voluptas veniam odio earum. Delectus nihil laboriosam ab aperiam velit, hic veniam? Totam, nam quae, ex voluptatem blanditiis minima incidunt officia veniam, maiores molestias est voluptatibus? Aut qui dolores dolor et quod!</p>
-       <button class="bg-red-500 py-[0.25rem] px-[0.64rem] rounded-md mx-auto drop-shadow hover:drop-shadow-lg transition-all duration-300">Press Me</button>
+<!-- Encabezado con diseño de grid -->
+<header  class="grid grid-cols-1  md:grid-cols-2 grid-flow-row-dense mb-2">
+    <!-- Contenido principal -->
+    <div class="w-auto p-3 md:p-0 flex flex-col flex-wrap justify-center text-left gap-5 md:gap-5 ">
+        <!-- Título -->
+        <h1 class="md:pl-5 text-center md:text-left">Welcome to my Estetic Store
+        Transform Your Look
+        </h1>
+          <!-- Sub-Título -->
+       
+        <!-- Descripción -->
+        <p class="md:pl-5 text-gray-400 text-center md:text-left">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius laboriosam atque placeat cum modi consectetur accusantium veniam. Eum voluptas veniam odio earum. Delectus nihil laboriosam ab aperiam velit, hic veniam? Totam, nam quae, ex voluptatem bland</p>
+        <!-- Botón -->
+        <button class="py-[0.25rem] px-[1rem] rounded-md md:ml-5   md:text-center md:w-[20%] hover:drop-shadow-lg transition-all duration-300">Press Me</button>
     </div>
     
-    <picture class="md:flex justify-end pr-20 pt-10 hidden"> 
-       <Image class="w-[350px] h-[350px] " src={Hand} alt="Hand Estetic"></Image>
+    <!-- Imagen (oculta en pantallas pequeñas) -->
+    <picture class="hero md:flex justify-start items-center hidden"> 
+        <Image class=" w-[350px] h-[350px]" src={Hand} alt="Hand Estetic"></Image>
+      
     </picture>
- </header>
- 
+</header>
+
 
 <style>
     header {
-        height: calc(100vh - 64px);
-        background-color: var(--color-secondary);
+        height: calc(100dvh - 64px);
+       
+    }
+ 
+    h2 {
+        color: var(--color-primary);
+        font-weight: 600;
     }
     button {
         background-color: var(--color-primary);
-        color: var(--color-secondary);
+        font-weight: 600;
+        color: var(--color-tertiary);
+    }
+    img {
+        mask-image: linear-gradient(black 80%, transparent)
+        ;
+    }
+    .hero {
+        
+        
+        background-size: 700px;
+        background-position: center center;
+        background-clip: padding-box;
+        background-repeat: no-repeat;
     }
 </style>
