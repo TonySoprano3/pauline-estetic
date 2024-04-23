@@ -5,7 +5,7 @@ import Hand from '../assets/hand.webp'
 
 ---
 <!-- Encabezado con diseño de grid -->
-<header  class="grid grid-cols-1  md:grid-cols-2 grid-flow-row-dense mb-2">
+<header  class="flex flex-col-reverse md:grid md:grid-cols-2 md:grid-flow-row-dense mb-2">
     <!-- Contenido principal -->
     <div class="w-auto p-3 md:p-0 flex flex-col flex-wrap justify-center text-left gap-5 md:gap-5 ">
         <!-- Título -->
@@ -21,7 +21,7 @@ import Hand from '../assets/hand.webp'
     </div>
     
     <!-- Imagen (oculta en pantallas pequeñas) -->
-    <picture class="hero md:flex justify-start items-center hidden"> 
+    <picture class="hero mx-auto md:m-0  md:flex justify-start items-center"> 
         <Image loading="eager" class=" w-[350px] h-[350px]" src={Hand} alt="Hand Estetic"></Image>
       
     </picture>
