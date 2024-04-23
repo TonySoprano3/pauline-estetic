@@ -9,7 +9,7 @@ import Hand from '../assets/hand.webp'
     <!-- Contenido principal -->
     <div class="w-auto p-3 md:p-0 flex flex-col flex-wrap justify-center text-left gap-5 md:gap-5 ">
         <!-- Título -->
-        <h1 class="md:pl-5 text-center md:text-left">Welcome to my Estetic Store
+        <h1 class="md:pl-5 text-center md:text-left ">Welcome to my Estetic Store
         Transform Your Look
         </h1>
           <!-- Sub-Título -->
@@ -31,9 +31,14 @@ import Hand from '../assets/hand.webp'
 <style>
     header {
         height: 100dvh;
-       
     }
- 
+
+    h1 {
+	line-height: 3rem;
+    font-size: clamp(2.28rem, 4vw, 3rem);
+	color: var(--color-primary);
+	}
+
     h2 {
         color: var(--color-primary);
         font-weight: 600;
