@@ -4,12 +4,25 @@ import Nails from '../assets/nails/nails.webp';
 const numImages = 6; // Define el número de imágenes que deseas mostrar
 ---
 
-<section class="object-cover flex flex-wrap p-5 gap-5 justify-center flex-[350px] ">
+<section >
+    <figure class="object-cover flex flex-wrap p-5 gap-5 justify-center flex-[350px] ">
     {Array.from({ length: numImages }, (_, index) => (
-        <figure>
+        <picture>
             <Image src={Nails} alt={`Nails Model ${index + 1}`} />
-        </figure>
+        </picture>
     ))}
+ </figure>
+    <article class="flex items-center gap-5 p-5">
+        <div>
+      <h2>Semi Permanent</h2>
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem laudantium eveniet, sit consequuntur ex sunt magnam exercitationem atque similique. Id praesentium cupiditate sed eaque sunt quod omnis similique error labore pariatur soluta, dolor harum tenetur sequi repudiandae nihil voluptatem placeat ducimus quas veniam et ipsa ullam! Id eum tempore cupiditate!</p>
+    </div>
+   
+      <picture>
+        <Image src={Nails} alt="Nails"></Image>
+      </picture>
+   
+    </article>
 </section>
 
 <style>
@@ -19,10 +32,13 @@ const numImages = 6; // Define el número de imágenes que deseas mostrar
         width: 300px;
         height: 300px;
     }
-    figure {
+    picture {
         transition: all .3s;
     }
-    figure:hover {
+    picture:hover {
         transform: scale(1.1);
+    }
+    article {
+        background-color: var(--color-primary);
     }
 </style>
