@@ -5,15 +5,13 @@ import Hand from '../assets/hand.webp'
 
 ---
 <!-- Encabezado con diseño de grid -->
-<header  class="flex flex-col-reverse justify-between md:grid md:grid-cols-2 md:grid-flow-row-dense mb-2">
+<header  class="flex flex-col-reverse justify-center md:grid md:grid-cols-2 md:grid-flow-row-dense mb-2">
     <!-- Contenido principal -->
-    <div class="w-auto p-3 md:p-0 flex flex-col flex-wrap justify-center text-left gap-5 md:gap-5 ">
+    <div class="w-auto p-3 md:p-0 flex flex-col flex-wrap h-full justify-center text-left gap-5 md:gap-5 ">
         <!-- Título -->
         <h1 class="md:pl-5 text-center  md:text-left ">Welcome to my Estetic Store
         Transform Your Look
         </h1>
-          <!-- Sub-Título -->
-       
         <!-- Descripción -->
         <p class="md:pl-5 text-gray-400 text-center md:text-left">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius laboriosam atque placeat cum modi consectetur accusantium veniam. Eum voluptas veniam odio earum. Delectus nihil laboriosam ab aperiam velit, hic veniam? Totam, nam quae, ex voluptatem bland</p>
         <!-- Botón -->
@@ -21,7 +19,7 @@ import Hand from '../assets/hand.webp'
     </div>
     
     <!-- Imagen (oculta en pantallas pequeñas) -->
-    <picture class="hero mt-[3rem] w-[180px] mx-auto md:m-0  md:flex justify-start items-center"> 
+    <picture class="hero relative top-[13%]  w-[180px] mx-auto md:m-0  md:flex justify-start items-center"> 
         <Image loading="eager" class=" md:size-[350px] md:max-w-[none] " src={Hand} alt="Hand Estetic"></Image>
       
     </picture>
