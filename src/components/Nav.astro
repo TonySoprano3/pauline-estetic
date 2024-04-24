@@ -4,7 +4,8 @@
 class="
   flex flex-wrap
   z-10
-  
+  shadow
+  md:shadow-none
   fixed
   md:static
   items-center
@@ -83,7 +84,11 @@ a {
 
 
 @media (max-width: 768px) {
- 
+
+  nav {
+  background-color: var(--color-tertiary);
+  }
+  
   a {
     color: var(--color-primary);
     font-weight: 600;
