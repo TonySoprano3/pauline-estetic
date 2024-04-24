@@ -5,9 +5,9 @@ import Hand from '../assets/hand.webp'
 
 ---
 <!-- Encabezado con diseño de grid -->
-<header  class="flex flex-col justify-around md:grid md:grid-cols-2 md:grid-flow-row-dense mb-2">
+<header  class="grid grid-cols-1 md:grid-cols-2 md:grid-flow-row-dense mb-2">
     <!-- Contenido principal -->
-    <div class=" p-1 flex flex-col md:p-0 md:justify-center text-center md:text-left gap-5 md:gap-5 ">
+    <div class="p-1 order-2 flex flex-col md:p-0 md:justify-center text-center md:text-left gap-5 md:gap-5 ">
         <!-- Título -->
         <h1 class="md:pl-5 text-center  md:text-left ">Welcome to my Estetic Store
         Transform Your Look
@@ -19,7 +19,7 @@ import Hand from '../assets/hand.webp'
     </div>
     
     <!-- Imagen (oculta en pantallas pequeñas) -->
-    <picture class="hero hidden  w-[180px] mx-auto md:m-0  md:flex justify-start items-center"> 
+    <picture class="mt-[5rem] md:order-2  w-[180px] mx-auto md:m-0  md:flex justify-start items-center"> 
         <Image loading="eager" class=" md:size-[350px] md:max-w-[none] " src={Hand} alt="Hand Estetic"></Image>
       
     </picture>
@@ -29,6 +29,7 @@ import Hand from '../assets/hand.webp'
 <style>
     header {
         height: 100dvh;
+        
     }
 
     h1 {
@@ -51,12 +52,5 @@ import Hand from '../assets/hand.webp'
         mask-image: linear-gradient(black 80%, transparent)
         ;
     }
-    .hero {
-        
-        
-        background-size: 700px;
-        background-position: center center;
-        background-clip: padding-box;
-        background-repeat: no-repeat;
-    }
+    
 </style>
