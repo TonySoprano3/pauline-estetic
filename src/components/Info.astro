@@ -3,7 +3,7 @@ import { Image } from 'astro:assets'
 import Hand from '../assets/hand.webp'
 ---
 
-<section class=" rounded-3xl flex flex-wrap content-center justify-evenly text-center h-full drop-shadow-lg gap-3 p-3 mx-8">
+<section class=" rounded-3xl flex content-center justify-evenly text-center h-full drop-shadow-lg gap-3 p-3 mx-8">
 <article>
 <Image src={Hand} alt="Hand"></Image>
 <p>Semi-permanent</p>
@@ -30,5 +30,11 @@ import Hand from '../assets/hand.webp'
     }
     section img {
         width: 150px;
+    }
+
+    @media(max-width: 768px) {
+       img {
+        width: 100px;
+        }
     }
 </style>

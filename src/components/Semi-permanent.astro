@@ -1,6 +1,7 @@
 ---
 import { Image } from 'astro:assets';
 import Nails from '../assets/nails/nails.webp';
+import Carrousel from '../components/Carousel.astro';
 const numImages = 6; // Define el número de imágenes que deseas mostrar
 ---
 
@@ -12,6 +13,9 @@ const numImages = 6; // Define el número de imágenes que deseas mostrar
         </picture>
     ))}
  </figure>
+
+    <Carrousel/>
+
     <article class="flex items-center flex-col-reverse md:flex-row text-center md:text-left gap-5 p-5">
         <div class="flex flex-col gap-5">
       <h2>Semi Permanent</h2>

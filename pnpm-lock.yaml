@@ -11,6 +11,9 @@ dependencies:
   astro:
     specifier: ^4.6.2
     version: 4.6.2
+  embla-carousel:
+    specifier: ^8.0.2
+    version: 8.0.2
   sharp:
     specifier: ^0.33.3
     version: 0.33.3
@@ -1785,6 +1788,10 @@ packages:
 
   /electron-to-chromium@1.4.740:
     resolution: {integrity: sha512-Yvg5i+iyv7Xm18BRdVPVm8lc7kgxM3r6iwqCH2zB7QZy1kZRNmd0Zqm0zcD9XoFREE5/5rwIuIAOT+/mzGcnZg==}
+    dev: false
+
+  /embla-carousel@8.0.2:
+    resolution: {integrity: sha512-bogsDO8xosuh/l3PxIvA5AMl3+BnRVAse9sDW/60amzj4MbGS5re4WH5eVEXiuH8G1/3G7QUAX2QNr3Yx8z5rA==}
     dev: false
 
   /emoji-regex@10.3.0:
