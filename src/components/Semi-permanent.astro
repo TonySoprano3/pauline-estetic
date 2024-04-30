@@ -1,20 +1,14 @@
 ---
 import { Image } from 'astro:assets';
 import Nails from '../assets/nails/nails.webp';
-import Carrousel from '../components/Carousel.astro';
+import Carousel from './Carousel.astro';
 const numImages = 6; // Define el número de imágenes que deseas mostrar
 ---
 
 <section >
-    <figure class="object-cover flex flex-wrap p-5 gap-5 justify-center flex-[350px] ">
-    {Array.from({ length: numImages }, (_, index) => (
-        <picture>
-            <Image src={Nails} alt={`Nails Model ${index + 1}`} />
-        </picture>
-    ))}
- </figure>
+ <Carousel/>
 
-    <Carrousel/>
+
 
     <article class="flex items-center flex-col-reverse md:flex-row text-center md:text-left gap-5 p-5">
         <div class="flex flex-col gap-5">
@@ -25,7 +19,6 @@ const numImages = 6; // Define el número de imágenes que deseas mostrar
       <picture>
         <Image src={Nails} alt="Nails"></Image>
       </picture>
-   
     </article>
 </section>
 
