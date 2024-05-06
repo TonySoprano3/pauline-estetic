@@ -6,7 +6,7 @@ const YourComponent = () => {
   const [currentDataType, setCurrentDataType] = useState('semi');
 
   const handleClick = (type) => {
-    setCurrentDataType(type); // Establece directamente el nuevo tipo de datos
+    setCurrentDataType(type);
   };
 
   const currentData = currentDataType === 'semi' ? SemiData : KappingData;
@@ -15,6 +15,21 @@ const YourComponent = () => {
 
   return (
     <section>
+      <div className="rounded-3xl grid grid-cols-2 md:grid-cols-3 place-items-center text-center h-full drop-shadow-lg gap-3 p-3 mx-8" style={{backgroundColor: 'var(--color-primary)'}}>
+        <figure>
+          <img src="src/assets/hand.webp" alt="Hand" />
+          <p>Semi-permanent</p>
+        </figure>
+        <figure>
+          <img src='src/assets/hand.webp' alt="Hand" />
+          <p>Kapping</p>
+        </figure>
+        <figure>
+          <img src='src/assets/hand.webp' alt="Hand" />
+          <p>Soft Gel Extensions</p>
+        </figure>
+      </div>
+
       <div className="flex flex-col gap-5 p-5">
         <button
           className={`bg-blue-500 text-white font-bold px-5 py-3 rounded-md hover:bg-blue-600 ${currentDataType === 'semi' ? 'bg-blue-600' : ''}`}
@@ -30,25 +45,29 @@ const YourComponent = () => {
         </button>
       </div>
 
-      <picture>
-        <figure className="flex flex-wrap gap-5 justify-center p-10">
-          {images.map((data, index) => (
-            <figure key={index}>
-              <img src={data.src} alt={data.alt} style={{ minWidth: '200px', width: '300px', height: '300px', transition: 'all 0.3s' }} />
-            </figure>
-          ))}
-        </figure>
-      </picture>
+      <div className="flex flex-wrap gap-5 justify-center p-10">
+        {images.map((data, index) => (
+          <figure key={index}>
+            <img
+              src={data.src}
+              alt={data.alt}
+              className="hover:scale-110"
+              style={{ minWidth: '200px', width: '300px', height: '300px', transition: 'all 0.3s' }}
+            />
+          </figure>
+        ))}
+      </div>
 
       <article className="flex items-center flex-col-reverse md:flex-row text-center md:text-left gap-5 p-5" style={{ backgroundColor: 'var(--color-primary)' }}>
         <div className="flex flex-col gap-5">
           <h2>{title}</h2>
           <p>{content}</p>
         </div>
-
-        <picture>
-          <img src={additionalImage.src} alt={additionalImage.alt} style={{ minWidth: '200px', width: '300px', height: '300px', transition: 'all 0.3s' }} />
-        </picture>
+        <img
+          src={additionalImage.src}
+          alt={additionalImage.alt}
+          style={{ minWidth: '200px', width: '300px', height: '300px', transition: 'all 0.3s' }}
+        />
       </article>
     </section>
   );
