@@ -2,7 +2,7 @@
     "section": {
       "images": [
         {
-          "src": "src/assets/nails/kapping.jpg",
+          "src": "../assets/nails/kapping.jpg",
           "alt": "Kapping Nails 1"
         },
         {
