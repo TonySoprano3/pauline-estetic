@@ -2,7 +2,7 @@
 import Header from '../components/Header.astro';
 import Info from '../components/Info.astro';
 import Nav from '../components/Nav.astro';
-import SemiPermanent from '../components/Semi-permanent.astro';
+import SemiPermanent from '../components/Semi-permanent.jsx';
 import Layout from '../layouts/Layout.astro';
 
 ---
@@ -15,7 +15,7 @@ import Layout from '../layouts/Layout.astro';
 		<Nav/>
 		<Header/>
 		<Info/>
-		<SemiPermanent/>
+		<SemiPermanent client:load />
 	
 	</main>
 		
