@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import SemiData from '../components/info/Semi.json';
 import KappingData from '../components/info/Kapping.json';
-import HandImg from '../assets/nails/kapping.jpg'
-
+import HandImg from '../../public/assets/nails/kapping.jpg'
 
 const YourComponent = () => {
   const [currentDataType, setCurrentDataType] = useState('semi');
