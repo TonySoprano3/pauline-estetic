@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import SemiData from '../components/info/Semi.json';
 import KappingData from '../components/info/Kapping.json';
-import HandImg from '../../public/assets/nails/kapping.jpg'
+
 
 const YourComponent = () => {
   const [currentDataType, setCurrentDataType] = useState('semi');
@@ -19,11 +19,11 @@ const YourComponent = () => {
     <section>
       <div className="rounded-3xl grid grid-cols-2 md:grid-cols-3 place-items-center text-center h-full drop-shadow-lg gap-3 p-3 mx-8" style={{backgroundColor: 'var(--color-primary)'}}>
         <figure>
-          <img src={HandImg} className='size-[150px] ' alt="Hand" />
+          <img src='assets\nails\nails.webp' className='size-[150px] ' alt="Hand" />
           <p>Semi-permanent</p>
         </figure>
         <figure>
-          <img src='src/assets/hand.webp' alt="Hand" className='size-[150px] ' />
+          <img src='../../public/assets/hand.webp' alt="Hand" className='size-[150px] ' />
           <p>Kapping</p>
         </figure>
         <figure>
