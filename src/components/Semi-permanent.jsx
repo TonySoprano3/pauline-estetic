@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import SemiData from '../components/info/Semi.json';
 import KappingData from '../components/info/Kapping.json';
+import Hand from '../assets/hand.webp'
 
 
 const YourComponent = () => {
@@ -19,7 +20,7 @@ const YourComponent = () => {
     <section>
       <div className="rounded-3xl grid grid-cols-2 md:grid-cols-3 place-items-center text-center h-full drop-shadow-lg gap-3 p-3 mx-8" style={{backgroundColor: 'var(--color-primary)'}}>
         <figure>
-          <img src='assets\nails\nails.webp' className='size-[150px] ' alt="Hand" />
+          <img src={Hand} className='size-[150px] ' alt="Hand" />
           <p>Semi-permanent</p>
         </figure>
         <figure>

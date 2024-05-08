@@ -7,6 +7,10 @@ export default defineConfig({
     react(),
     tailwind(),
     
-  ]
+  ],
+  build: {
+    // Disable image optimization
+    optimizeImages: false,
+  },
 });
   
