@@ -2,27 +2,27 @@
     "section": {
       "images": [
         {
-          "src": "assets/hand.webp",
+          "src": "src/assets/nails/kapping.jpg",
           "alt": "Kapping Nails 1"
         },
         {
-          "src": "assets/hand.webp",
+          "src": "src/assets/nails/kapping.jpg",
           "alt": "Kapping Nails 2"
         },
         {
-          "src": "assets/hand.webp",
+          "src": "src/assets/nails/kapping.jpg",
           "alt": "Kapping Nails 3"
         },
         {
-          "src": "assets/hand.webp",
+          "src": "src/assets/nails/kapping.jpg",
           "alt": "Kapping Nails 4"
         },
         {
-          "src": "assets/hand.webp",
+          "src": "src/assets/nails/kapping.jpg",
           "alt": "Kapping Nails 5"
         },
         {
-          "src": "assets/hand.webp",
+          "src": "src/assets/nails/kapping.jpg",
           "alt": "Kapping Nails 6"
         }
        
@@ -34,7 +34,7 @@
         "title": "Kapping",
         "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem laudantium eveniet, sit consequuntur ex sunt magnam exercitationem atque similique. Id praesentium cupiditate sed eaque sunt quod omnis similique error labore pariatur soluta, dolor harum tenetur sequi repudiandae nihil voluptatem placeat ducimus quas veniam et ipsa ullam! Id eum tempore cupiditate!",
         "additionalImage": {
-          "src": "assets/hand.webp",
+          "src": "src/assets/nails/kapping.jpg",
           "alt": "Kapping Nails"
         }
       }
