@@ -50,7 +50,7 @@ const Nails = () => {
         {images.map((data, index) => (
           <figure key={index}>
             <img
-              src={data.src}
+              src={(data.src).src}
               alt={data.alt}
               className="hover:scale-110"
               style={{ minWidth: '200px', width: '300px', height: '300px', transition: 'all 0.3s' }}
