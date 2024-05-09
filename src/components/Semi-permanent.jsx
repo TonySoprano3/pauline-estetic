@@ -20,15 +20,15 @@ const Nails = () => {
     <section>
       <div className="rounded-3xl grid grid-cols-2 md:grid-cols-3 place-items-center text-center h-full drop-shadow-lg gap-3 p-3 mx-8" style={{backgroundColor: 'var(--color-primary)'}}>
         <figure>
-          <img src={Hand} className='size-[150px] ' alt="Hand" />
+          <img src={Hand.src} className='size-[150px] ' alt="Hand" />
           <p>Semi-permanent</p>
         </figure>
         <figure>
-          <img src='../../public/assets/hand.webp' alt="Hand" className='size-[150px] ' />
+          <img src={Hand.src} className='size-[150px] ' />
           <p>Kapping</p>
         </figure>
         <figure>
-          <img src='src/assets/hand.webp' alt="Hand" className='size-[150px] ' />
+          <img src={Hand.src} alt="Hand" className='size-[150px] ' />
           <p>Soft Gel Extensions</p>
         </figure>
       </div>
