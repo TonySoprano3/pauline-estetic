@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import SemiData from '../components/info/Semi.json';
 import KappingData from '../components/info/Kapping.json';
 import Hand from '../assets/hand.webp'
-
+import Kapping from '../assets/nails/kapping.jpg'
 
 const Nails = () => {
   const [currentDataType, setCurrentDataType] = useState('semi');
