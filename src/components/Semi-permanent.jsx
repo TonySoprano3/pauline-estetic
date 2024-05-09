@@ -2,11 +2,9 @@ import React, { useState } from 'react';
 import SemiData from '../components/info/Semi.json';
 import KappingData from '../components/info/Kapping.json';
 import Hand from '../assets/hand.webp'
-import Kapping from '../assets/nails/kapping.jpg'
 
 const Nails = () => {
   const [currentDataType, setCurrentDataType] = useState('semi');
-
   const handleClick = (type) => {
     setCurrentDataType(type);
   };
@@ -56,7 +54,7 @@ const Nails = () => {
               alt={data.alt}
               className="hover:scale-110"
               style={{ minWidth: '200px', width: '300px', height: '300px', transition: 'all 0.3s' }}
-            />
+            ></img>
           </figure>
         ))}
       </div>
