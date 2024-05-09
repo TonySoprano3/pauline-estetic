@@ -12,7 +12,7 @@ const Nails = () => {
   const currentData = currentDataType === 'semi' ? SemiData : KappingData;
   const { images, article } = currentData.section;
   const { content, additionalImage, title } = article;
-  const imagenQl = currentData.section.images[0];
+
   return (
     <section>
       <div className="rounded-3xl grid grid-cols-2 md:grid-cols-3 place-items-center text-center h-full drop-shadow-lg gap-3 p-3 mx-8" style={{backgroundColor: 'var(--color-primary)'}}>
@@ -49,7 +49,7 @@ const Nails = () => {
         {images.map((data, index) => (
           <figure key={index}>
             <img
-              src={imagenQl.src}
+              src={data.src}
               alt={data.alt}
               className="hover:scale-110"
               style={{ minWidth: '200px', width: '300px', height: '300px', transition: 'all 0.3s' }}
