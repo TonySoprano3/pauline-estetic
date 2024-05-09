@@ -1,27 +1,42 @@
 import React, { useState } from 'react';
 import SemiData from '../components/info/Semi.json';
 import KappingData from '../components/info/Kapping.json';
-import Hand from '../assets/hand.webp'
+import SoftGelData from '../components/info/Softgel.json';
+import Hand from '../assets/hand.webp';
 
 const Nails = () => {
   const [currentDataType, setCurrentDataType] = useState('semi');
+
   const handleClick = (type) => {
     setCurrentDataType(type);
   };
 
-  const currentData = currentDataType === 'semi' ? SemiData : KappingData;
+  const getDataByType = (type) => {
+    switch (type) {
+      case 'semi':
+        return SemiData;
+      case 'kapping':
+        return KappingData;
+      case 'softgel':
+        return SoftGelData;
+      default:
+        return SemiData; // Por defecto, muestra SemiData si el tipo no coincide
+    }
+  };
+
+  const currentData = getDataByType(currentDataType);
   const { images, article } = currentData.section;
   const { content, additionalImage, title } = article;
 
   return (
     <section>
-      <div className="rounded-3xl grid grid-cols-2 md:grid-cols-3 place-items-center text-center h-full drop-shadow-lg gap-3 p-3 mx-8" style={{backgroundColor: 'var(--color-primary)'}}>
+      <div className="rounded-3xl grid grid-cols-2 md:grid-cols-3 place-items-center text-center h-full drop-shadow-lg gap-3 p-3 mx-8" style={{ backgroundColor: 'var(--color-primary)' }}>
         <figure>
           <img src={Hand.src} className='size-[150px] ' alt="Hand" />
           <p>Semi-permanent</p>
         </figure>
         <figure>
-          <img src={Hand.src} className='size-[150px] ' />
+          <img src={Hand.src} className='size-[150px] ' alt="Hand" />
           <p>Kapping</p>
         </figure>
         <figure>
@@ -43,17 +58,24 @@ const Nails = () => {
         >
           Kapping
         </button>
+        <button
+          className={`bg-blue-500 text-white font-bold px-5 py-3 rounded-md hover:bg-blue-600 ${currentDataType === 'softgel' ? 'bg-blue-600' : ''}`}
+          onClick={() => handleClick('softgel')}
+        >
+          Soft Gel
+        </button>
       </div>
 
       <div className="flex flex-wrap gap-5 justify-center p-10">
         {images.map((data, index) => (
           <figure key={index}>
             <img
+              loading='lazy'
               src={data.src}
               alt={data.alt}
               className="hover:scale-110"
               style={{ minWidth: '200px', width: '300px', height: '300px', transition: 'all 0.3s' }}
-            ></img>
+            />
           </figure>
         ))}
       </div>
