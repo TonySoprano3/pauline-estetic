@@ -2,27 +2,27 @@
     "section": {
       "images": [
         {
-          "src": "src/assets/nails/kapping.jpg",
+          "src": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTvrvFG2dncGfMdcE5Iu9GMWuGW0O-HkmjnDpTh6Qt_x0FH8YECqBagVmWxUThfWHy0jeXyGA",
           "alt": "Kapping Nails 1"
         },
         {
-          "src": "src/assets/nails/kapping.jpg",
+          "src": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTvrvFG2dncGfMdcE5Iu9GMWuGW0O-HkmjnDpTh6Qt_x0FH8YECqBagVmWxUThfWHy0jeXyGA",
           "alt": "Kapping Nails 2"
         },
         {
-          "src": "src/assets/nails/kapping.jpg",
+          "src": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTvrvFG2dncGfMdcE5Iu9GMWuGW0O-HkmjnDpTh6Qt_x0FH8YECqBagVmWxUThfWHy0jeXyGA",
           "alt": "Kapping Nails 3"
         },
         {
-          "src": "src/assets/nails/kapping.jpg",
+          "src": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTvrvFG2dncGfMdcE5Iu9GMWuGW0O-HkmjnDpTh6Qt_x0FH8YECqBagVmWxUThfWHy0jeXyGA",
           "alt": "Kapping Nails 4"
         },
         {
-          "src": "src/assets/nails/kapping.jpg",
+          "src": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTvrvFG2dncGfMdcE5Iu9GMWuGW0O-HkmjnDpTh6Qt_x0FH8YECqBagVmWxUThfWHy0jeXyGA",
           "alt": "Kapping Nails 5"
         },
         {
-          "src": "src/assets/nails/kapping.jpg",
+          "src": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTvrvFG2dncGfMdcE5Iu9GMWuGW0O-HkmjnDpTh6Qt_x0FH8YECqBagVmWxUThfWHy0jeXyGA",
           "alt": "Kapping Nails 6"
         }
        
@@ -34,7 +34,7 @@
         "title": "Kapping",
         "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem laudantium eveniet, sit consequuntur ex sunt magnam exercitationem atque similique. Id praesentium cupiditate sed eaque sunt quod omnis similique error labore pariatur soluta, dolor harum tenetur sequi repudiandae nihil voluptatem placeat ducimus quas veniam et ipsa ullam! Id eum tempore cupiditate!",
         "additionalImage": {
-          "src": "src/assets/nails/kapping.jpg",
+          "src": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTvrvFG2dncGfMdcE5Iu9GMWuGW0O-HkmjnDpTh6Qt_x0FH8YECqBagVmWxUThfWHy0jeXyGA",
           "alt": "Kapping Nails"
         }
       }
