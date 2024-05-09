@@ -8,7 +8,7 @@ const Nails = () => {
   const handleClick = (type) => {
     setCurrentDataType(type);
   };
-  
+  console.log(SemiData.section.images)
 
   const currentData = currentDataType === 'semi' ? SemiData : KappingData;
   const { images, article } = currentData.section;
