@@ -4,7 +4,7 @@ import KappingData from '../components/info/Kapping.json';
 import Hand from '../assets/hand.webp'
 
 
-const YourComponent = () => {
+const Nails = () => {
   const [currentDataType, setCurrentDataType] = useState('semi');
 
   const handleClick = (type) => {
@@ -76,4 +76,4 @@ const YourComponent = () => {
   );
 };
 
-export default YourComponent;
+export default Nails;

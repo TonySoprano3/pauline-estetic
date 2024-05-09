@@ -1,9 +1,8 @@
 ---
 import Header from '../components/Header.astro';
 import Nav from '../components/Nav.astro';
-import SemiPermanent from '../components/Semi-permanent.jsx';
 import Layout from '../layouts/Layout.astro';
-
+import Nails from '../components/Semi-permanent.jsx'
 ---
 
 <Layout title="Pauline Estetic">
@@ -13,7 +12,7 @@ import Layout from '../layouts/Layout.astro';
 		<div class="bg-2 w-[50%] absolute md:w-[58%] left-0 top-0 md:h-[112dvh]"></div>
 		<Nav/>
 		<Header/>
-		<SemiPermanent client:load />
+		<Nails client:load/>
 	
 	</main>
 		

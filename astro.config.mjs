@@ -8,9 +8,6 @@ export default defineConfig({
     tailwind(),
     
   ],
-  build: {
-    // Disable image optimization
-    optimizeImages: false,
-  },
+
 });
   
