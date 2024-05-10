@@ -32,16 +32,25 @@ const Nails = () => {
     <section>
       <div className="rounded-3xl grid grid-cols-2 md:grid-cols-3 place-items-center text-center h-full drop-shadow-lg gap-3 p-3 mx-8" style={{ backgroundColor: 'var(--color-primary)' }}>
         <figure>
-          <img src={Hand.src} className='size-[150px] ' alt="Hand" />
+
+          <button onClick={() => handleClick('semi')}>
+          <img src={Hand.src} className='size-[150px] ' alt="Hand"  />
           <p>Semi-permanent</p>
+          </button>
         </figure>
+
         <figure>
+          <button onClick={() => handleClick('kapping')}>
           <img src={Hand.src} className='size-[150px] ' alt="Hand" />
           <p>Kapping</p>
+          </button>
         </figure>
+
         <figure>
+          <button onClick={() => handleClick('softgel')}>
           <img src={Hand.src} alt="Hand" className='size-[150px] ' />
           <p>Soft Gel Extensions</p>
+          </button>
         </figure>
       </div>
 
