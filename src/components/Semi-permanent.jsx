@@ -3,7 +3,8 @@ import SemiData from '../components/info/Semi.json';
 import KappingData from '../components/info/Kapping.json';
 import SoftGelData from '../components/info/Softgel.json';
 import Hand from '../assets/hand.webp';
-
+import HandTwo from '../assets/hand2.svg'
+import HandThree from '../assets/hand3.webp'
 const Nails = () => {
   const [currentDataType, setCurrentDataType] = useState('semi');
 
@@ -30,50 +31,31 @@ const Nails = () => {
 
   return (
     <section>
-      <div className="rounded-3xl grid grid-cols-2 md:grid-cols-3 place-items-center text-center h-full drop-shadow-lg gap-3 p-3 mx-8" style={{ backgroundColor: 'var(--color-primary)' }}>
+      <div className="rounded-3xl grid grid-cols-2 md:grid-cols-3 place-items-center text-center h-full drop-shadow-lg gap-3 p-3 mx-8" style={{ backgroundColor: 'var(--color-tertiary)' }}>
         <figure>
 
-          <button onClick={() => handleClick('semi')}>
+          <button className={`font-light px-5 py-3 rounded-md transition-all ${currentDataType === 'semi' ? 'scale-110 font-bold text-[var(--color-primary)] '  : ''}`} onClick={() => handleClick('semi')}>
           <img src={Hand.src} className='size-[150px] ' alt="Hand"  />
           <p>Semi-permanent</p>
           </button>
         </figure>
 
         <figure>
-          <button onClick={() => handleClick('kapping')}>
-          <img src={Hand.src} className='size-[150px] ' alt="Hand" />
+          <button className={`font-light px-5 py-3 rounded-md transition-all ${currentDataType === 'kapping' ? 'scale-110 font-bold text-[var(--color-primary)] '  : ''}`} onClick={() => handleClick('kapping')}>
+          <img src={HandTwo.src} className='size-[150px] ' alt="Hand" />
           <p>Kapping</p>
           </button>
         </figure>
 
         <figure>
-          <button onClick={() => handleClick('softgel')}>
-          <img src={Hand.src} alt="Hand" className='size-[150px] ' />
+          <button className={`font-light px-5 py-3 rounded-md transition-all ${currentDataType === 'softgel' ? 'scale-110 font-bold text-[var(--color-primary)] '  : ''}`} onClick={() => handleClick('softgel')}>
+          <img src={HandThree.src} alt="Hand" className='size-[150px] ' />
           <p>Soft Gel Extensions</p>
           </button>
         </figure>
       </div>
 
-      <div className="flex flex-col gap-5 p-5">
-        <button
-          className={`bg-blue-500 text-white font-bold px-5 py-3 rounded-md hover:bg-blue-600 ${currentDataType === 'semi' ? 'bg-blue-600' : ''}`}
-          onClick={() => handleClick('semi')}
-        >
-          Semi
-        </button>
-        <button
-          className={`bg-blue-500 text-white font-bold px-5 py-3 rounded-md hover:bg-blue-600 ${currentDataType === 'kapping' ? 'bg-blue-600' : ''}`}
-          onClick={() => handleClick('kapping')}
-        >
-          Kapping
-        </button>
-        <button
-          className={`bg-blue-500 text-white font-bold px-5 py-3 rounded-md hover:bg-blue-600 ${currentDataType === 'softgel' ? 'bg-blue-600' : ''}`}
-          onClick={() => handleClick('softgel')}
-        >
-          Soft Gel
-        </button>
-      </div>
+     
 
       <div className="flex flex-wrap gap-5 justify-center p-10">
         {images.map((data, index) => (
