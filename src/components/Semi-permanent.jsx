@@ -6,10 +6,17 @@ import Hand from '../assets/hand.webp';
 import HandTwo from '../assets/hand2.svg'
 import HandThree from '../assets/hand3.webp'
 const Nails = () => {
+  
   const [currentDataType, setCurrentDataType] = useState('semi');
+  const [zoomedImage, setZoomedImage] = useState(null);
 
   const handleClick = (type) => {
     setCurrentDataType(type);
+    setZoomedImage(null);
+  };
+
+  const handleImageClick = (index) => {
+    setZoomedImage(index);
   };
 
   const getDataByType = (type) => {
@@ -27,62 +34,70 @@ const Nails = () => {
 
   const currentData = getDataByType(currentDataType);
   const { images, article } = currentData.section;
-  const { content, additionalImage, title } = article;
+  const { content, additionalImage, title, subtitle } = article;
 
   return (
     <section>
-      <div className="rounded-3xl grid grid-cols-2 md:grid-cols-3 place-items-center text-center h-full drop-shadow-lg gap-3 p-3 mx-8" style={{ backgroundColor: 'var(--color-tertiary)' }}>
+      <div className=" grid grid-cols-3  place-items-center text-center h-full gap-3 p-3 md:mx-8 md:rounded-[4.5rem]  " style={{ backgroundColor: 'var(--color-secondary)' }}>
         <figure>
 
-          <button className={`font-light px-5 py-3 rounded-md transition-all ${currentDataType === 'semi' ? 'scale-110 font-bold text-[var(--color-primary)] '  : ''}`} onClick={() => handleClick('semi')}>
+          <button className={`font-extralight  px-5 py-3 rounded-md transition-all ${currentDataType === 'softgel' ? 'scale-110 font-bold text-[var(--color-primary)] drop-shadow '  : 'text-gray-400'}`} onClick={() => handleClick('softgel')}>
           <img src={Hand.src} className='size-[150px] ' alt="Hand"  />
-          <p>Semi-permanent</p>
+          <p>Extensiones Softgel</p>
           </button>
         </figure>
 
         <figure>
-          <button className={`font-light px-5 py-3 rounded-md transition-all ${currentDataType === 'kapping' ? 'scale-110 font-bold text-[var(--color-primary)] '  : ''}`} onClick={() => handleClick('kapping')}>
+          <button className={`font-light px-5 py-3 rounded-md transition-all ${currentDataType === 'semi' ? 'scale-110 font-bold text-[var(--color-primary)] drop-shadow '  : 'text-gray-400'}`} onClick={() => handleClick('semi')}>
           <img src={HandTwo.src} className='size-[150px] ' alt="Hand" />
-          <p>Kapping</p>
+          <p>Semi y Kapping</p>
           </button>
         </figure>
 
         <figure>
-          <button className={`font-light px-5 py-3 rounded-md transition-all ${currentDataType === 'softgel' ? 'scale-110 font-bold text-[var(--color-primary)] '  : ''}`} onClick={() => handleClick('softgel')}>
+          <button className={`font-light px-5 py-3 rounded-md transition-all ${currentDataType === 'kapping' ? 'scale-110 font-bold text-[var(--color-primary)] drop-shadow '  : 'text-gray-400'}`} onClick={() => handleClick('kapping')}>
           <img src={HandThree.src} alt="Hand" className='size-[150px] ' />
-          <p>Soft Gel Extensions</p>
+          <p>Ver Todo</p>
           </button>
         </figure>
       </div>
 
      
-
+    
       <div className="flex flex-wrap gap-5 justify-center p-10">
         {images.map((data, index) => (
-          <figure key={index}>
+          <figure key={index}
+          onClick={() => handleImageClick(index)}
+          >
+           
             <img
+
               loading='lazy'
               src={data.src}
               alt={data.alt}
-              className="hover:scale-110"
-              style={{ minWidth: '200px', width: '300px', height: '300px', transition: 'all 0.3s' }}
+              className={zoomedImage === index ? " " : "hover:scale-110"}
+              style={{ minWidth: '200px', width: '300px', height: '300px', transition: 'all 0.3s',  }}
             />
+        
           </figure>
         ))}
       </div>
 
-      <article className="flex items-center flex-col-reverse md:flex-row text-center md:text-left gap-5 p-5" style={{ backgroundColor: 'var(--color-primary)' }}>
-        <div className="flex flex-col gap-5">
-          <h2>{title}</h2>
-          <p>{content}</p>
+      <article className="flex items-center flex-col-reverse md:flex-row text-center md:text-left gap-[9rem] p-5" style={{ backgroundColor: 'var(--color-secondary)' }}>
+        <div className="flex flex-col gap-3">
+          <h2 className='text-3xl  font-bold text-[var(--color-primary)] '>{title}</h2>
+          <h3 className='text-gray-400 text-lg/relaxed'>{subtitle}</h3>
+          <p className='text-base/relaxed text-gray-500'>{content}</p>
         </div>
         <img
           src={additionalImage.src}
           alt={additionalImage.alt}
-          style={{ minWidth: '200px', width: '300px', height: '300px', transition: 'all 0.3s' }}
+          style={{ width: '100%', height: '300px' }}
         />
       </article>
+      
     </section>
+    
   );
 };
 
