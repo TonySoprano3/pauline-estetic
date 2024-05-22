@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import SemiData from '../components/info/Semi.json';
-import KappingData from '../components/info/Kapping.json';
+import AllData from '../components/info/All.json';
 import SoftGelData from '../components/info/Softgel.json';
 import Hand from '../assets/hand.webp';
 import HandTwo from '../assets/hand2.svg'
@@ -23,8 +23,8 @@ const Nails = () => {
     switch (type) {
       case 'semi':
         return SemiData;
-      case 'kapping':
-        return KappingData;
+      case 'all':
+        return AllData;
       case 'softgel':
         return SoftGelData;
       default:
@@ -55,7 +55,7 @@ const Nails = () => {
         </figure>
 
         <figure>
-          <button className={`font-light px-5 py-3 rounded-md transition-all ${currentDataType === 'kapping' ? 'scale-110 font-bold text-[var(--color-primary)] drop-shadow '  : 'text-[var(--color-text)]'}`} onClick={() => handleClick('kapping')}>
+          <button className={`font-light px-5 py-3 rounded-md transition-all ${currentDataType === 'all' ? 'scale-110 font-bold text-[var(--color-primary)] drop-shadow '  : 'text-[var(--color-text)]'}`} onClick={() => handleClick('all')}>
           <img src={HandThree.src} alt="Hand" className='size-[150px] ' />
           <p>Ver Todo</p>
           </button>
