@@ -86,7 +86,7 @@ const Nails = () => {
       <article className="flex items-center flex-col-reverse md:flex-row text-center md:text-left gap-[9rem] p-5" style={{ backgroundColor: 'var(--color-primary)' }}>
         <div className="flex flex-col gap-3">
           <h2 className='text-3xl  font-bold text-[var(--color-secondary)] '>{title}</h2>
-          <h3 className='text-lg/relaxed'>{subtitle}</h3>
+          <h3 className='text-lg/relaxed text-[--color-tertiary] '>{subtitle}</h3>
           <p className='text-base/relaxed text-[var(--color-text)] '>{content}</p>
         </div>
         <img
