@@ -41,21 +41,21 @@ const Nails = () => {
       <div className=" grid grid-cols-3  place-items-center text-center h-full gap-3 p-3 md:mx-8 md:rounded-[4.5rem]  " style={{ backgroundColor: 'var(--color-secondary)' }}>
         <figure>
 
-          <button className={`font-extralight  px-5 py-3 rounded-md transition-all ${currentDataType === 'softgel' ? 'scale-110 font-bold text-[var(--color-primary)] drop-shadow '  : 'text-gray-400'}`} onClick={() => handleClick('softgel')}>
+          <button className={`font-extralight  px-5 py-3 rounded-md transition-all ${currentDataType === 'softgel' ? 'scale-110 font-bold text-[var(--color-primary)] drop-shadow '  : 'text-[var(--color-text)] '}`} onClick={() => handleClick('softgel')}>
           <img src={Hand.src} className='size-[150px] ' alt="Hand"  />
           <p>Extensiones Softgel</p>
           </button>
         </figure>
 
         <figure>
-          <button className={`font-light px-5 py-3 rounded-md transition-all ${currentDataType === 'semi' ? 'scale-110 font-bold text-[var(--color-primary)] drop-shadow '  : 'text-gray-400'}`} onClick={() => handleClick('semi')}>
+          <button className={`font-light px-5 py-3 rounded-md transition-all ${currentDataType === 'semi' ? 'scale-110 font-bold text-[var(--color-primary)] drop-shadow '  : 'text-[var(--color-text)]'}`} onClick={() => handleClick('semi')}>
           <img src={HandTwo.src} className='size-[150px] ' alt="Hand" />
           <p>Semi y Kapping</p>
           </button>
         </figure>
 
         <figure>
-          <button className={`font-light px-5 py-3 rounded-md transition-all ${currentDataType === 'kapping' ? 'scale-110 font-bold text-[var(--color-primary)] drop-shadow '  : 'text-gray-400'}`} onClick={() => handleClick('kapping')}>
+          <button className={`font-light px-5 py-3 rounded-md transition-all ${currentDataType === 'kapping' ? 'scale-110 font-bold text-[var(--color-primary)] drop-shadow '  : 'text-[var(--color-text)]'}`} onClick={() => handleClick('kapping')}>
           <img src={HandThree.src} alt="Hand" className='size-[150px] ' />
           <p>Ver Todo</p>
           </button>
@@ -83,11 +83,11 @@ const Nails = () => {
         ))}
       </div>
 
-      <article className="flex items-center flex-col-reverse md:flex-row text-center md:text-left gap-[9rem] p-5" style={{ backgroundColor: 'var(--color-secondary)' }}>
+      <article className="flex items-center flex-col-reverse md:flex-row text-center md:text-left gap-[9rem] p-5" style={{ backgroundColor: 'var(--color-primary)' }}>
         <div className="flex flex-col gap-3">
-          <h2 className='text-3xl  font-bold text-[var(--color-primary)] '>{title}</h2>
-          <h3 className='text-gray-400 text-lg/relaxed'>{subtitle}</h3>
-          <p className='text-base/relaxed text-gray-500'>{content}</p>
+          <h2 className='text-3xl  font-bold text-[var(--color-secondary)] '>{title}</h2>
+          <h3 className='text-lg/relaxed'>{subtitle}</h3>
+          <p className='text-base/relaxed text-[var(--color-text)] '>{content}</p>
         </div>
         <img
           src={additionalImage.src}
