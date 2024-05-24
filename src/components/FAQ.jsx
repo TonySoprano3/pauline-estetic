@@ -1,4 +1,4 @@
-import { Disclosure } from '@headlessui/react'
+import { Disclosure, Transition } from '@headlessui/react'
 import { ChevronUpIcon } from '@heroicons/react/solid'
 
 const faqs = [
@@ -38,13 +38,23 @@ export default function Faqs() {
               <Disclosure key={index}>
                 {({ open }) => (
                   <>
-                    <Disclosure.Button className="flex w-full items-center justify-between rounded-md bg-gray-100 px-4 py-3 text-left font-medium transition-colors hover:bg-gray-200 focus:outline-none focus-visible:ring focus-visible:ring-gray-400">
+                    <Disclosure.Button className="flex w-full items-center justify-between rounded-md bg-gray-100 px-4 py-3 text-left font-medium transition-colors hover:bg-gray-200 focus:outline-none focus-visible:ring focus-visible:ring-gray-400 ">
                       <span>{faq.question}</span>
-                      <ChevronUpIcon className={`${open ? 'transform rotate-180' : ''} w-5 h-5`} />
+                      <ChevronUpIcon className={`${open ? 'transform rotate-180' : ''} w-5 h-5 transition-transform`} />
                     </Disclosure.Button>
-                    <Disclosure.Panel className="rounded-b-md bg-gray-100 px-4 py-3 text-gray-500">
-                      {faq.answer}
-                    </Disclosure.Panel>
+                    <Transition
+                      show={open}
+                      enter="transition duration-300 ease-out"
+                      enterFrom="transform scale-95 opacity-0"
+                      enterTo="transform scale-100 opacity-100"
+                      leave="transition duration-300 ease-in"
+                      leaveFrom="transform scale-100 opacity-100"
+                      leaveTo="transform scale-95 opacity-0"
+                    >
+                      <Disclosure.Panel className="rounded-b-md bg-gray-100 px-4 py-3 text-gray-500  dark:text-gray-400">
+                        {faq.answer}
+                      </Disclosure.Panel>
+                    </Transition>
                   </>
                 )}
               </Disclosure>
