@@ -2,21 +2,23 @@
 import Header from '../components/Header.astro';
 import Nav from '../components/Nav.astro';
 import Layout from '../layouts/Layout.astro';
-import Nails from '../components/Semi-permanent.jsx'
+import Nails from '../components/NailsSect.astro'
 import Section from '../components/Section.astro'
 import FAQ from '../components/FAQ.jsx'
+import Gallery from '../components/Gallery.jsx'
 ---
 
 <Layout title="Pauline Estetic">
 
 	<main >
-		<div class="bg absolute w-[50%]  md:w-[42%] right-0 top-0 md:h-[132dvh]"></div>
-		<div class="bg-2 w-[50%] absolute md:w-[58%] left-0 top-0 md:h-[132dvh]"></div>
+		<div class="bg absolute w-[50%]  md:w-[42%] right-0 top-0 md:h-[100dvh]"></div>
+		<div class="bg-2 w-[50%] absolute md:w-[58%] left-0 top-0 md:h-[100dvh]"></div>
 		<Nav/>
 		<Header/>
-		<Nails client:load/>
+		<Nails/>
 		<Section/>
 		<FAQ client:load/>
+		<Gallery client:load/>
 	</main>
 		
 	

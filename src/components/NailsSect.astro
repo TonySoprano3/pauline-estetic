@@ -1,0 +1,77 @@
+---
+import { Image } from 'astro:assets'
+import Semi from '../assets/nails/nails.webp'
+import Soft from '../assets/nails/kapping.jpg'
+import All from '../assets/nails/all.jpg'
+---
+    <section class="w-full py-12 md:py-24 lg:py-32">
+      <div class="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-4 md:px-6">
+        <a
+          class="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-transform duration-300 ease-in-out hover:-translate-y-2"
+          href="#"
+        >
+          <Image
+            alt="Aesthetic Nails"
+            class="object-cover w-full h-64 group-hover:opacity-50 transition-opacity"
+            height={400}
+            src={Semi}
+            style={{
+              aspectRatio: "500/400",
+              objectFit: "cover",
+            }}
+            width={500}
+          />
+          <div class="absolute inset-0 z-10 flex flex-col justify-end bg-gradient-to-t from-gray-900/75 to-transparent p-6 group-hover:from-gray-900/50">
+            <h3 class="text-xl font-bold text-white">#1 Aesthetic Nails</h3>
+            <p class="text-gray-300 line-clamp-2">
+              Discover the latest trends in aesthetic nail designs and get inspired for your next manicure.
+            </p>
+          </div>
+        </a>
+        <a
+          class="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-transform duration-300 ease-in-out hover:-translate-y-2"
+          href="#"
+        >
+          <Image
+            alt="Minimalist Nails"
+            class="object-cover w-full h-64 group-hover:opacity-50 transition-opacity"
+            height={400}
+            src={Soft}
+            style={{
+              aspectRatio: "500/400",
+              objectFit: "cover",
+            }}
+            width={500}
+          />
+          <div class="absolute inset-0 z-10 flex flex-col justify-end bg-gradient-to-t from-gray-900/75 to-transparent p-6 group-hover:from-gray-900/50">
+            <h3 class="text-xl font-bold text-white">Minimalist Nails</h3>
+            <p class="text-gray-300 line-clamp-2">
+              Embrace the beauty of simplicity with these stunning minimalist nail designs.
+            </p>
+          </div>
+        </a>
+        <a
+          class="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-transform duration-300 ease-in-out hover:-translate-y-2"
+          href="#"
+        >
+          <Image
+            alt="Nail Art Inspiration"
+            class="object-cover w-full h-64 group-hover:opacity-50 transition-opacity"
+            height={400}
+            src={All}
+            style={{
+              aspectRatio: "500/400",
+              objectFit: "cover",
+            }}
+            width={500}
+          />
+          <div class="absolute inset-0 z-10 flex flex-col justify-end bg-gradient-to-t from-gray-900/75 to-transparent p-6 group-hover:from-gray-900/50">
+            <h3 class="text-xl font-bold text-white">Nail Art Inspiration</h3>
+            <p class="text-gray-300 line-clamp-2">
+              Explore the world of intricate nail art and find your next creative masterpiece.
+            </p>
+          </div>
+        </a>
+      </div>
+    </section>
+  
