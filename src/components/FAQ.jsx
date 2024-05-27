@@ -29,8 +29,8 @@ export default function Faqs() {
     <section className="w-full py-12 md:py-24 lg:py-32">
       <div className="container px-4 md:px-6">
         <div className="mx-auto max-w-3xl space-y-4">
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Frequently Asked Questions</h2>
-          <p className="text-gray-500 dark:text-gray-400">
+          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-[var(--color-primary)] ">Frequently Asked Questions</h2>
+          <p className="text-[var(--color-text)] ">
             Get answers to your most common questions about nail care, trends, and our services.
           </p>
           <div className="space-y-2">
@@ -38,9 +38,9 @@ export default function Faqs() {
               <Disclosure key={index}>
                 {({ open }) => (
                   <>
-                    <Disclosure.Button className="flex w-full items-center justify-between rounded-md bg-gray-100 px-4 py-3 text-left font-medium transition-colors hover:bg-gray-200 focus:outline-none focus-visible:ring focus-visible:ring-gray-400 ">
-                      <span>{faq.question}</span>
-                      <ChevronUpIcon className={`${open ? 'transform rotate-180' : ''} w-5 h-5 transition-transform`} />
+                    <Disclosure.Button className="flex w-full items-center justify-between rounded-md bg-gray-100 px-4 py-3 text-left font-medium transition-colors hover:bg-[var(--color-secondary)] focus:outline-none focus-visible:ring focus-visible:ring-gray-400 ">
+                      <span className='text-[var(--color-tertiary)] '>{faq.question}</span>
+                      <ChevronUpIcon className={`${open  ? ' transform rotate-180' : ''} w-5 h-5 transition-transform text-[var(--color-primary)] `} />
                     </Disclosure.Button>
                     <Transition
                       show={open}
@@ -51,7 +51,7 @@ export default function Faqs() {
                       leaveFrom="transform scale-100 opacity-100"
                       leaveTo="transform scale-95 opacity-0"
                     >
-                      <Disclosure.Panel className="rounded-b-md bg-gray-100 px-4 py-3 text-gray-500  dark:text-gray-400">
+                      <Disclosure.Panel className="rounded-b-md text-[var(--color-text)] px-4 py-3 ">
                         {faq.answer}
                       </Disclosure.Panel>
                     </Transition>
