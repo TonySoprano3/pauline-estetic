@@ -8,6 +8,8 @@ export default defineConfig({
     tailwind(),
     
   ],
-
+  pages: {
+    loader: 'jsx'
+  }
 });
   
