@@ -50,7 +50,7 @@ const Semi = () => {
             onClick={toggleZoom}
           />
         </div>
-        <div className="mt-4 flex flex-wrap md:grid md:grid-cols-3 justify-center md:absolute md:right-0">
+        <div className="mt-4 flex flex-wrap md:grid md:grid-cols-2 justify-center md:absolute md:right-[30px] ">
           {Softgel.section.images.map((image, index) => (
             <img
               key={index}
