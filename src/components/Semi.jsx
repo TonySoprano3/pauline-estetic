@@ -2,18 +2,16 @@ import React, { useState } from 'react';
 import Softgel from '../components/info/Softgel.json';
 
 const Semi = () => {
-  
   const images = Softgel.section.images.map(image => image.src);
 
   const [mainImage, setMainImage] = useState(images[0]);
   const [isZoomed, setIsZoomed] = useState(false);
-  const [hoveredImage, setHoveredImage] = useState(null);
   const [zoomIndex, setZoomIndex] = useState(0);
 
   const changeMainImage = (image, index) => {
     setMainImage(image);
     setZoomIndex(index);
-    setIsZoomed(true); // Mantenemos el visor de imágenes abierto al cambiar la imagen
+    setIsZoomed(false); // Cerramos el visor de imágenes al cambiar la imagen
   };
 
   const toggleZoom = () => {
@@ -46,9 +44,9 @@ const Semi = () => {
       <div className="flex flex-col items-center">
         <div className="relative w-full max-w-md">
           <img
-            src={hoveredImage || mainImage}
+            src={mainImage}
             alt="Imagen principal"
-            className={`w-full h-auto cursor-${isZoomed ? 'zoom-out' : 'zoom-in'} transition-transform duration-300 ${isZoomed ? '' : ''}`}
+            className={`size-[450px] cursor-${isZoomed ? 'zoom-out' : 'zoom-in'} transition-transform duration-300`}
             onClick={toggleZoom}
           />
         </div>
@@ -59,9 +57,7 @@ const Semi = () => {
               src={image.src}
               alt={image.alt}
               className="w-20 h-20 object-cover cursor-pointer border-2 border-transparent hover:border-gray-500 transition m-1"
-              onClick={() => changeMainImage(image.src, index)}
-              onMouseEnter={() => setHoveredImage(image.src)}
-              onMouseLeave={() => setHoveredImage(null)}
+              onMouseEnter={() => changeMainImage(image.src, index)}
             />
           ))}
         </div>
