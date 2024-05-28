@@ -1,17 +1,10 @@
 import React, { useState } from 'react';
-
-const images = [
-  'https://via.placeholder.com/350',
-  'https://via.placeholder.com/350/0000FF',
-  'https://via.placeholder.com/350/FF0000',
-  'https://via.placeholder.com/350/00FF00',
-  'https://via.placeholder.com/350/0000FF',
-  'https://via.placeholder.com/350/FF0000',
-  'https://via.placeholder.com/350/00FF00',
-  // Agrega más rutas de imágenes aquí
-];
+import Softgel from '../components/info/Softgel.json';
 
 const Semi = () => {
+  
+  const images = Softgel.section.images.map(image => image.src);
+
   const [mainImage, setMainImage] = useState(images[0]);
   const [isZoomed, setIsZoomed] = useState(false);
   const [hoveredImage, setHoveredImage] = useState(null);
@@ -60,14 +53,14 @@ const Semi = () => {
           />
         </div>
         <div className="mt-4 flex flex-wrap md:grid md:grid-cols-3 justify-center md:absolute md:right-0">
-          {images.map((image, index) => (
+          {Softgel.section.images.map((image, index) => (
             <img
               key={index}
-              src={image}
-              alt={`Miniatura ${index + 1}`}
+              src={image.src}
+              alt={image.alt}
               className="w-20 h-20 object-cover cursor-pointer border-2 border-transparent hover:border-gray-500 transition m-1"
-              onClick={() => changeMainImage(image, index)}
-              onMouseEnter={() => setHoveredImage(image)}
+              onClick={() => changeMainImage(image.src, index)}
+              onMouseEnter={() => setHoveredImage(image.src)}
               onMouseLeave={() => setHoveredImage(null)}
             />
           ))}
