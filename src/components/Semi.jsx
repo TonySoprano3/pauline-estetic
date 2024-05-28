@@ -3,14 +3,16 @@ import Softgel from '../components/info/Softgel.json';
 
 const Semi = () => {
   const images = Softgel.section.images.map(image => image.src);
+  const titles = Softgel.section.images.map(image => image.title);
+  const texts = Softgel.section.images.map(image => image.text);
 
   const [mainImage, setMainImage] = useState(images[0]);
+  const [currentIndex, setCurrentIndex] = useState(0);
   const [isZoomed, setIsZoomed] = useState(false);
-  const [zoomIndex, setZoomIndex] = useState(0);
 
   const changeMainImage = (image, index) => {
     setMainImage(image);
-    setZoomIndex(index);
+    setCurrentIndex(index);
     setIsZoomed(false); // Cerramos el visor de imágenes al cambiar la imagen
   };
 
@@ -19,16 +21,16 @@ const Semi = () => {
   };
 
   const nextImage = () => {
-    const nextIndex = (zoomIndex + 1) % images.length;
+    const nextIndex = (currentIndex + 1) % images.length;
     setMainImage(images[nextIndex]);
-    setZoomIndex(nextIndex);
+    setCurrentIndex(nextIndex);
     setIsZoomed(true); // Mantenemos el visor de imágenes abierto al cambiar la imagen
   };
 
   const prevImage = () => {
-    const prevIndex = (zoomIndex - 1 + images.length) % images.length;
+    const prevIndex = (currentIndex - 1 + images.length) % images.length;
     setMainImage(images[prevIndex]);
-    setZoomIndex(prevIndex);
+    setCurrentIndex(prevIndex);
     setIsZoomed(true); // Mantenemos el visor de imágenes abierto al cambiar la imagen
   };
 
@@ -46,21 +48,26 @@ const Semi = () => {
           <img
             src={mainImage}
             alt="Imagen principal"
-            className={`size-[450px] cursor-${isZoomed ? 'zoom-out' : 'zoom-in'} transition-transform duration-300`}
+            className={`size-[450px] cursor-zoom-in cursor-${isZoomed ? '' : 'cursor-zoom-out'} transition-transform duration-300`}
             onClick={toggleZoom}
           />
         </div>
-        <div className="mt-4 flex flex-wrap md:grid md:grid-cols-2 justify-center md:absolute md:right-[30px] ">
+        <div className="mt-4 flex flex-wrap md:grid md:grid-cols-1 justify-center md:absolute md:right-[35px]">
           {Softgel.section.images.map((image, index) => (
             <img
               key={index}
               src={image.src}
               alt={image.alt}
-              className="w-20 h-20 object-cover cursor-pointer border-2 border-transparent hover:border-gray-500 transition m-1"
+              className="size-16 object-cover cursor-pointer border-2 border-transparent hover:border-gray-500 transition m-1"
               onMouseEnter={() => changeMainImage(image.src, index)}
             />
           ))}
         </div>
+
+        <article className='lg:absolute lg:left-[30px] lg:top-[150px] lg:w-[330px] text-center'>
+          <h1 className='text-xl text-[var(--color-primary)]'>{titles[currentIndex]}</h1>
+          <p className='text-balance mt-3'>{texts[currentIndex]}</p>
+        </article>
       </div>
 
       {isZoomed && (
