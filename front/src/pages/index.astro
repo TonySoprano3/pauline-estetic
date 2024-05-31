@@ -1,0 +1,74 @@
+---
+import Header from '../components/Header.astro';
+import Nav from '../components/Nav.astro';
+import Layout from '../layouts/Layout.astro';
+import Nails from '../components/NailsSect.astro'
+import Section from '../components/Section.astro'
+import FAQ from '../components/FAQ.jsx'
+
+---
+
+<Layout title="Pauline Estetic">
+
+	<main >
+		<div class="bg absolute w-[50%]  md:w-[42%] right-0 top-0 md:h-[100dvh]"></div>
+		<div class="bg-2 w-[50%] absolute md:w-[58%] left-0 top-0 md:h-[100dvh]"></div>
+		<Nav/>
+		<Header/>
+		<Nails/>
+		<Section/>
+		<FAQ client:load/>
+	
+	</main>
+		
+	
+</Layout>
+
+<style is:global>
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+
+	:root {
+    --color-background: hsl(88 23% 95%);
+	--color-primary: hsl(348 100% 82%);
+	--color-text: hsl(348 100% 86%);
+	--color-secondary: hsl(0 69% 90%);
+	--color-tertiary: hsl(0 46% 77%);
+  		  }
+
+		  .bg {
+			z-index: -10;
+			background-color: var(--color-primary);
+		  }
+		  .bg-2 {
+			z-index: -10;
+			background-color: var(--color-background);
+		  }
+html {
+	background-color: var(--color-background);
+	font-family: "Playfair Display", serif;
+	line-height: 1.576rem;
+	}
+
+
+	
+p  {	
+
+	font-size: clamp(1.035rem, 2vw, 0.85rem);
+	}
+
+	
+	@media (max-width: 1080px) {
+		h1 {
+			font-size: 2.35rem;
+			line-height: 3rem;
+			
+		}
+		h2 {
+			font-size: 2.20rem;
+		}
+	
+	}
+	
+</style>
