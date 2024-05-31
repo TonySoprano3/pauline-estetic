@@ -3,7 +3,7 @@
 
 class="
   flex flex-wrap
-  z-10
+  z-20
   shadow
   md:shadow-none
   fixed
@@ -76,8 +76,8 @@ class="
 <style>
 
 a {
-    
-    color: var(--color-secondary);
+    transition: all 3.ms;
+    color: var(--color-background);
     font-weight: 600;
 }
 
@@ -88,11 +88,7 @@ a {
   background-color: var(--color-primary);
   }
   
-  a {
-    color: var(--color-text);
-    font-weight: 600;
-  
-  }
+
   a:hover {
     text-decoration: underline;
   }

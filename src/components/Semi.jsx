@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Softgel from '../components/info/Softgel.json';
+import NailSec from '../components/NailsSect.astro'
 
 const Semi = () => {
   const images = Softgel.section.images.map(image => image.src);
@@ -41,14 +42,14 @@ const Semi = () => {
   };
 
   return (
-    <div className="container mx-auto py-10 h-[100dvh] ">
-      <h1 className="text-3xl font-bold text-center mb-8">Galería de Estética de Uñas</h1>
+    <div className="container mx-auto py-10 mb-[10em]  md:mb-[10dvh] h-[100dvh] bg-[var(--color-background)] ">
+      <h1 className="text-3xl font-bold text-center mb-8 text-[var(--color-primary)] ">Galería de Estética de Uñas</h1>
       <div className="flex flex-col items-center">
         <div className="relative w-full max-w-md">
           <img
             src={mainImage}
             alt="Imagen principal"
-            className={`size-[450px] cursor-zoom-in cursor-${isZoomed ? '' : 'cursor-zoom-out'} transition-transform duration-300`}
+            className={`size-[450px] shadow-lg cursor-zoom-in cursor-${isZoomed ? '' : 'cursor-zoom-out'} transition-transform duration-300`}
             onClick={toggleZoom}
           />
         </div>
@@ -58,16 +59,16 @@ const Semi = () => {
               key={index}
               src={image.src}
               alt={image.alt}
-              className="size-16 object-cover cursor-pointer border-2 border-transparent hover:border-gray-500 transition m-1"
+              className="size-16  object-cover cursor-pointer border-2 border-transparent hover:border-gray-500 transition m-1"
               onMouseEnter={() => changeMainImage(image.src, index)}
             />
           ))}
         </div>
 
-        <article className='lg:absolute lg:left-[30px] lg:top-[150px] lg:w-[330px] text-center'>
+        <aside className='lg:absolute  lg:left-[30px] lg:top-[150px] lg:w-[330px] text-center md:text-left'>
           <h1 className='text-xl text-[var(--color-primary)]'>{titles[currentIndex]}</h1>
-          <p className='text-balance mt-3'>{texts[currentIndex]}</p>
-        </article>
+          <p className='text-balance mt-3 text-[var(--color-secondary)] '>{texts[currentIndex]}</p>
+        </aside>
       </div>
 
       {isZoomed && (
@@ -97,7 +98,9 @@ const Semi = () => {
           />
         </div>
       )}
+     
     </div>
+    
   );
 };
 
