@@ -1,6 +1,8 @@
 ---
 import { ViewTransitions } from 'astro:transitions';
 import Footer from '../components/Footer.astro';
+import Nav from '../components/Nav.astro';
+
 interface Props {
 	title: string;
 }
@@ -21,8 +23,10 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
+		<Nav/>
 		<slot />
 		<Footer/>
+
 	</body>
 
 </html>
@@ -40,4 +44,6 @@ const { title } = Astro.props;
 	--color-secondary: hsl(0 69% 90%);
 	--color-tertiary: hsl(0 46% 77%);
   		  }
+
+		 
 </style>
