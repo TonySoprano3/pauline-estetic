@@ -30,7 +30,7 @@ export default function Faqs() {
       <div className="container px-4 md:px-6">
         <div className="mx-auto max-w-3xl space-y-4">
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-[var(--color-primary)] ">Frequently Asked Questions</h2>
-          <p className="text-[var(--color-text)] ">
+          <p className="text-[var(--color-secondary)] ">
             Get answers to your most common questions about nail care, trends, and our services.
           </p>
           <div className="space-y-2">

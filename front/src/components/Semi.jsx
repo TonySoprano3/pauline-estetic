@@ -42,7 +42,7 @@ const Semi = () => {
   };
 
   return (
-    <div className="container mx-auto py-10 mb-[10em]  md:mb-[10dvh] h-[100dvh] bg-[var(--color-background)] ">
+    <div className="mx-auto py-10 mb-[10em] h-[100dvh]  md:mb-[10dvh] bg-[var(--color-background)] ">
       <h1 className="text-3xl font-bold text-center mb-8 text-[var(--color-primary)] ">Galería de Estética de Uñas</h1>
       <div className="flex flex-col items-center">
         <div className="relative w-full max-w-md">
