@@ -5,7 +5,7 @@ import Soft from '../assets/nails/kapping.jpg'
 import All from '../assets/nails/all.jpg'
 
 
-const Softgel = '/Softgel'
+const routes = ['/Softgel', '/Soft', '/All'];
 ---
     <section class="w-full h-full pb-[8rem] ">
       <h1 class="text-center font-bold text-base   text-[var(--color-primary)] ">Gallery</h1>
@@ -13,7 +13,7 @@ const Softgel = '/Softgel'
       <div class="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-4 md:px-6">
         <a
           class="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-transform duration-300 h-[70dvh] ease-in-out hover:-translate-y-2"
-          href={Softgel}
+          href={routes[0]}
         >
           <Image
             alt="Aesthetic Nails"
@@ -35,7 +35,7 @@ const Softgel = '/Softgel'
         </a>
         <a
           class="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-transform duration-300 ease-in-out hover:-translate-y-2"
-          href={Softgel}
+          href={routes[1]}
         >
           <Image
             alt="Minimalist Nails"
@@ -57,11 +57,12 @@ const Softgel = '/Softgel'
         </a>
         <a
           class="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-transform duration-300 ease-in-out hover:-translate-y-2"
-          href="#"
+          href={routes[2]}
         >
           <Image
             alt="Nail Art Inspiration"
             class="object-cover w-full h-[70dvh] group-hover:opacity-50 transition-opacity"
+          
             height={400}
             src={All}
             style={{

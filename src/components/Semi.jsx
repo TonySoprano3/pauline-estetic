@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Softgel from '../components/info/Softgel.json';
-import NailSec from '../components/NailsSect.astro'
+import All from '../components/info/All.json'
+import Soft from '../components/info/Semi.json'
 
 const Semi = () => {
   const images = Softgel.section.images.map(image => image.src);
